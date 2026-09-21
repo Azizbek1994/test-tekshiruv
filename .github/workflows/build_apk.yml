@@ -8,6 +8,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: ./test_tekshiruv_project
+
     steps:
     - uses: actions/checkout@v4
 
@@ -33,4 +37,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: test-tekshiruv-release
-        path: build/app/outputs/flutter-apk/app-release.apk
+        path: test_tekshiruv_project/build/app/outputs/flutter-apk/app-release.apk
